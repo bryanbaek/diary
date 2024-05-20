@@ -1,6 +1,12 @@
 __pycache__/
 *.py[cod]
-*.env
 *.log
+
+# Environments
 venv/
 .env
+*.env
+
+# VS Code configuration directory
+.vscode/
+
