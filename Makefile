@@ -42,7 +42,7 @@ docker-build:
 	$(eval CONTAINER_NAME=$(shell docker images --format '{{.ID}}' $(IMAGE_NAME) | head -n 1))
 
 # Run Docker container
-docker-run: dbuild
+docker-run: docker-build
 	@echo "Running Docker container with name: $(CONTAINER_NAME)"
 	docker run --name $(CONTAINER_NAME) --env-file .env -d -p 8000:8000 $(IMAGE_NAME)
 
