@@ -7,15 +7,17 @@ client = OpenAI(
     api_key=settings.OPENAI_API_KEY,
 )
 
-chat_completion = client.chat.completions.create(
-    messages=[
-        {
-            "role": "user",
-            "content": "Say this is a test",
-        }
-    ],
-    model="gpt-3.5-turbo",
-)
+def upload_file(file_path: str) -> str:
+    with open("file_path.txt", "r") as file:
+        file_contents = file.read()
+
+
+    file_response = client.File.create(
+    file=file_contents,
+    purpose="assistants"
+    )
+
+    return file_response.id
 
 def get_gpt_4o_response(prompt: str) -> str:
     response = client.chat.completions.create(
