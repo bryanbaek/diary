@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, HTTPException, Query, Body
 from app.services.google import get_gemini_pro_response, get_gemini_lite_response
 from app.services.openai import get_gpt_4o_response
 
@@ -6,7 +6,7 @@ from app.services.openai import get_gpt_4o_response
 router = APIRouter()
 
 @router.post("/chat")
-def chat(prompt: str, model: str = Query("gemini-pro", enum=["gemini-pro", "gemini-lite", "gpt-4o"])):
+def chat(prompt: str = Body(...), model: str = Body(...)):
     try:
         if model == "gemini-pro":
             response_text = get_gemini_pro_response(prompt)

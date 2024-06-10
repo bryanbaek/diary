@@ -7,4 +7,4 @@ app.include_router(chat.router)
 
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to the FastAPI Google API integration"}
+    return {"message": "Welcome to the FastAPI AI API integration"}
