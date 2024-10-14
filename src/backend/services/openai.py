@@ -1,5 +1,5 @@
 from openai import OpenAI
-from app.core.config import settings
+from src.core.config import settings
 
 # Configuration for OpenAI API
 client = OpenAI(

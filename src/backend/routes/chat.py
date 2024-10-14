@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException, Query, Body
-from app.services.google import get_gemini_pro_response, get_gemini_lite_response
-from app.services.openai import get_gpt_4o_response
+from src.services.google import get_gemini_pro_response, get_gemini_lite_response
+from src.services.openai import get_gpt_4o_response
 
 
 router = APIRouter()
