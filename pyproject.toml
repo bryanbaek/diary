@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "diary"
+version = "0.1.0"
+description = ""
+authors = ["Bryan Baek <seungkwan.baek@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.2"
+uvicorn = "^0.31.1"
+openai = "^1.51.2"
+chromadb = "^0.5.13"
+groq = "^0.11.0"
+google-generativeai = "^0.8.3"
+python-dotenv = "^1.0.1"
+mypy = "^1.11.2"
+ruff = "^0.6.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
